@@ -1,0 +1,108 @@
+body {
+    background: rgb(255, 19, 19);
+    margin: 0;
+}
+
+.menu {
+    width: 100%;
+    background: black;
+    overflow: auto;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 1;
+    list-style: none;
+    line-height: 60px;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu ul li a {
+    background: black;
+    text-decoration: none;
+    width: 130px;
+    display: block;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
+}
+
+.menu li a:hover {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 19px;
+}
+
+.search-form {
+    margin-top: 15px;
+    float: right;
+    margin-right: 100px;
+}
+
+input[type=text] {
+    padding: 7px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    float: right;
+    background: black;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    position: relative;
+    padding: 7px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    font-size: 16px;
+}
+
+
+
+.post {
+    margin: 10px 60px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1, h4, ol {
+    margin: 0;
+}
+
+p { 
+    margin: 5px 0;
+}
+
+.top-bar {
+    background-color: blue;
+    padding: 0 40px;
+}
+
+.main {
+    background-color: #F6F6EF;
+    padding: 10px 15px;
+}
+
+.row {
+    padding: 5px 0;
+}
+
+.bottom {
+    display: flex;
+    color: grey;
+    font-size: 12px;
+}
+
+.timestamp {
+    padding-right: 10px;
+}
