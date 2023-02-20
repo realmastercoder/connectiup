@@ -1,41 +1,42 @@
-
 /* Currently centered in page, should move to one side when proper image is created */
+
 #sign-in-box {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #ccc;
-    margin: 10px auto;
-    padding: 20px;
-    width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  margin: 10px auto;
+  margin-top: 75px;
+  padding: 20px;
+  width: 300px;
 }
 
 #banner {
-    background-color: rgb(148, 3, 32);
-    color: gold;
-    background-size: cover;
-    height: 40px;
-    margin: 0 auto;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    width: 100%;
+  background-color: rgb(148, 3, 32);
+  color: gold;
+  background-size: cover;
+  height: 40px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  width: 100%;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-  
-  .left-column {
-    flex: 1;
-    background-color: #ccc;
-    padding: 10px;
-    height: 500px;
-  }
-  
-  .right-column {
-    flex: 1;
-    background-color: #ddd;
-    padding: 10px;
-    height: 500px;
-  }
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.left-column {
+  flex: 1;
+  background-color: #ccc;
+  padding: 10px;
+  height: 500px;
+}
+
+.right-column {
+  flex: 1;
+  background-color: #ddd;
+  padding: 10px;
+  height: 500px;
+}
