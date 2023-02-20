@@ -9,16 +9,27 @@
     <div id="banner">
         <h1>Welcome to ConnectIUP</h1>
     </div>
-    <div id="sign-in-box">
-        <!-- html form for sign in -->
-        <form action="login.php" method="post">
-            <h1>Sign In</h1>
-            <input type="text" name="username" placeholder="Username" required><br><br>
-            <input type="password" name="password" placeholder="Password" required><br><br>
-            <input type="submit" name="submit" value="Sign In">
-            <p>Don't have an account? <a href="register.html">Register here.</a></p>
-        </form>
+    <div class="wrapper">
+        <div class="left-column">
+            <h2>What is ConnectIUP?</h2>
+            <p>ConnectIUP is a social media platform for IUP students to connect with each other. 
+                It is a place where students can share their experiences, ask questions, and find 
+                answers. ConnectIUP is a place where students can find a community of people who 
+                share similar interests and experiences.</p>
+        </div>
+        <div class="right-column">
+            <div id="sign-in-box">
+                <!-- html form for sign in -->
+                <form action="login.php" method="post">
+                    <h1>Sign In</h1>
+                    <input type="text" name="username" placeholder="Username" required><br><br>
+                    <input type="password" name="password" placeholder="Password" required><br><br>
+                    <input type="submit" name="submit" value="Sign In">
+                    <p>Don't have an account? <a href="register.html">Register here.</a></p>
+                </form>
+        </div>
     </div>
+</div>
     
 </body>
 </html>
