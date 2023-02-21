@@ -42,17 +42,23 @@ if (!$conn) {
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
+                print('<ul>');
                 while($row = mysqli_fetch_assoc($result)){
-                    print('<div id="post">');
+                    print('<div class="post">');
                     $title = $row["title"];
-                    print("title: " .'<a href="#">' . $row["title"] . '</a>' . "<br>");
                     $new_sql = "SELECT * from users where id = " . $row["user_id"];
                     $new_result = mysqli_query($conn, $new_sql);
                     $new_row = mysqli_fetch_assoc($new_result);
                     $username = $new_row["username"];
-                    print("created by: " . $username);
+                    #print("title: " .'<a href="#">' . $row["title"] . '</a>' . "<br>");
+                    print('<li class="row">');
+                    print('<a href="#">' . '<h4 class="title">' .  $title . '</h4>');
+                    print('<div class="bottom"><p class="timestamp">' . $row["created_at"] . '</p>');
+                    print('<p class="author">' . $username . '</p></div></a></li>');
+                    #print("created by: " . $username);
                     print("</div>");
                 }
+                print('</ol>');
             }
     ?>
     <div id="post">
