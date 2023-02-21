@@ -18,11 +18,15 @@ if (!$conn) {
 
 <head>
     <title>ConnectIUP</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
-    <h1 style="font-size:60px; font-family:'Times New Roman', Times, serif;"> <center>ConnectIUP</center></h1>
+    <!-- <h1 style="font-size:60px; font-family:'Times New Roman', Times, serif;"> <center>ConnectIUP</center></h1> -->
+    <div id="banner">
+        <img src="images/LogoConnectIUP.png" style="width: 400px;">
+    </div>
     <nav class ="menu">
         <ul>
             <li><a href='#'> Home</a></li>
@@ -37,12 +41,13 @@ if (!$conn) {
             <button>Search</button>
         </form>
     </nav>
+    <hr>
     <?php
             $sql = "SELECT * from posts";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
-                print('<ul>');
+                print('<ul class="no-bullets">');
                 while($row = mysqli_fetch_assoc($result)){
                     print('<div class="post">');
                     $title = $row["title"];
@@ -52,9 +57,9 @@ if (!$conn) {
                     $username = $new_row["username"];
                     #print("title: " .'<a href="#">' . $row["title"] . '</a>' . "<br>");
                     print('<li class="row">');
-                    print('<a href="#">' . '<h4 class="title">' .  $title . '</h4>');
+                    print('<a href="#">' . '<h4 class="title">' .  $title . '</h4></a>');
                     print('<div class="bottom"><p class="timestamp">' . $row["created_at"] . '</p>');
-                    print('<p class="author">' . $username . '</p></div></a></li>');
+                    print('<a href="#"><p class="author">' . $username . '</p></a></div></li>');
                     #print("created by: " . $username);
                     print("</div>");
                 }
