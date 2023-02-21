@@ -1,17 +1,15 @@
 /* Currently centered in page, should move to one side when proper image is created */
 
-#sign-in-box {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #ccc;
-  margin: 10px auto;
-  margin-top: 75px;
-  padding: 20px;
-  width: 300px;
+.intro {
+  padding: 25px;
+}
+
+h2 {
+  font-size: 36px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 #banner {
@@ -36,12 +34,13 @@ p {
   flex: 1;
   background-color: #ccc;
   padding: 10px;
-  height: 500px;
+  height: 1000px;
 }
 
 .right-column {
   flex: 1;
   background-color: #ddd;
   padding: 10px;
-  height: 500px;
+  height: 1000px;
+  margin: auto;
 }

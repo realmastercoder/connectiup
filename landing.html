@@ -12,23 +12,36 @@
     </div>
     <div class="wrapper">
         <div class="left-column">
+            <div class="intro">
             <h2>What is ConnectIUP?</h2>
             <p>ConnectIUP is a social media platform for IUP students to connect with each other. 
                 It is a place where students can share their experiences, ask questions, and find 
                 answers. ConnectIUP is a place where students can find a community of people who 
                 share similar interests and experiences.</p><br><br><br><br><br>
-            <center><img src="images/LogoConnectIUP.png" style="width: 700px;"></img></center>
+                <center><img src="images/LogoConnectIUP.png" style="width: 700px;"></img></center>
+            </div>
         </div>
         
         <div class="right-column">
-            <div id="sign-in-box">
-                <form action="login.php" method="post">
-                    <h1>Sign In</h1>
-                    <input type="text" name="username" placeholder="Username" required><br><br>
-                    <input type="password" name="password" placeholder="Password" required><br><br>
-                    <input type="submit" name="submit" value="Sign In">
-                    <p>Don't have an account? <a href="register.html">Register here.</a></p>
+            <div class="formBox" style="margin: auto; margin-top: 65px;">
+                <form action="#">
+                    <input type="text" placeholder="Email or Username">
+                    <input type="password" placeholder="Password">
+                    <button type="submit">
+                        Login
+                    </button>
+                    <a href="#">
+                        Forgot Password
+                    </a>
+                    <hr>
+                    <p> Not connected with IUP?</p>
+                    <div class="secondaryButton">
+                        <a href="register.html">
+                            Create Account
+                        </a>
+                    </div>
                 </form>
+            </div>
         </div>
     </div>
 </div>
