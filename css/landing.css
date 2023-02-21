@@ -10,14 +10,19 @@
   width: 300px;
 }
 
+p {
+  font-size: 16px;
+}
+
 #banner {
   background-color: rgb(148, 3, 32);
   color: gold;
   background-size: cover;
-  height: 40px;
+  height: 70px;
   margin: 0 auto;
   padding-bottom: 5px;
   padding-left: 10px;
+  padding-top: 10px;
   width: 100%;
 }
 
