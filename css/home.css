@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+h2 {
+    color: goldenrod;
+    margin-left: 20px;
+}
+
 #banner {
     background-color: black;
     padding: 10px;

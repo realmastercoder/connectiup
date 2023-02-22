@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -23,7 +24,6 @@ if (!$conn) {
 </head>
 
 <body>
-    <!-- <h1 style="font-size:60px; font-family:'Times New Roman', Times, serif;"> <center>ConnectIUP</center></h1> -->
     <div id="banner">
         <img src="images/LogoConnectIUP.png" style="width: 400px;">
     </div>
@@ -41,6 +41,7 @@ if (!$conn) {
             <button>Search</button>
         </form>
     </nav>
+    <h2>Welcome, <?php echo $_SESSION['username'];?>!</h2>
     <hr>
     <?php
             $sql = "SELECT * from posts";
