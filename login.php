@@ -29,7 +29,7 @@
             header('Location: homepage.php');
         }else{
             $fmsg = "Invalid Login Credentials.";
-            header('Location: login.php')
+            header('Location: login.php');
         }
 
     }
