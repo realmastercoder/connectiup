@@ -41,7 +41,7 @@ if (!$conn) {
             <button>Search</button>
         </form>
     </nav>
-    <h2>Welcome, <?php echo $_SESSION['username'];?>!</h2>
+    <!-- <h2>Welcome, <?php echo $_SESSION['username'];?>!</h2> -->
     <hr>
     <?php
             $sql = "SELECT * from posts";
