@@ -30,7 +30,7 @@ if (!$conn) {
     <nav class ="menu">
         <ul>
             <li><a href='#'> Home</a></li>
-            <li><a href='#'> Post Thread</a></li>
+            <li><a href='new_post.php'> Post Thread</a></li>
             <li><a href='#'> Add Friends</a></li>
             <li><a href='#'> Messaging</a></li>
             <li><a href='#'> About</a></li>
@@ -44,7 +44,7 @@ if (!$conn) {
     <h2>Welcome, <?php echo $_SESSION['username'];?>!</h2>
     <hr>
     <?php
-            $sql = "SELECT * from posts";
+            $sql = "SELECT * from posts ORDER BY id DESC";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
@@ -58,7 +58,7 @@ if (!$conn) {
                     $username = $new_row["username"];
                     #print("title: " .'<a href="#">' . $row["title"] . '</a>' . "<br>");
                     print('<li class="row">');
-                    print('<a href="#">' . '<h4 class="title">' .  $title . '</h4></a>');
+                    print('<a href="post.php?post_id=' . $row["id"] . '">' . '<h4 class="title">' .  $title . '</h4></a>');
                     print('<div class="bottom"><p class="timestamp">' . $row["created_at"] . '</p>');
                     print('<a href="#"><p class="author">' . $username . '</p></a></div></li>');
                     #print("created by: " . $username);
