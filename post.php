@@ -32,7 +32,7 @@ $poster = $row['user_id'];
 
 // display the post, including the title, content, poster, and created_at
 // use generic html, this will be modified later
-
+print('<a href="homepage.php">Back to Home</a>');
 print("<h1>$title</h1>");
 print("<p>$content</p>");
 print("<hr>");
