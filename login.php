@@ -29,10 +29,12 @@
             header('Location: homepage.php');
         }else{
             $fmsg = "Invalid Login Credentials.";
-            header('Location: login.php');
+            // send error code and redirect to login page
+            header('Location: login.html?err=1');
         }
 
     }
+    
 
     
 ?>

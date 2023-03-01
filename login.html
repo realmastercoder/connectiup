@@ -5,6 +5,7 @@
 <head>
     <title> ConnectIUP - Login </title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/err_proc.js"></script>
 </head>
 
 <body>
@@ -15,8 +16,8 @@
         </div>
         <div class="formBox">
             <form action="login.php" method="POST">
-                <input type="text" placeholder="Email or Username" name="username">
-                <input type="password" placeholder="Password" name="password">
+                <input type="text" placeholder="Email or Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
                 <button type="submit">
                     Login
                 </button>
