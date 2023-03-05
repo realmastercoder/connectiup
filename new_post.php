@@ -19,29 +19,31 @@ if (!$conn) {
 
     <head>
         <title>ConnectIUP - Post Feature</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/poststyle.css">
     </head>
 
     <body>
-        <form action="post_page.php" method="POST">
-            <h1>Start Connecting...</h1>
-            <?php
-                print("Welcome, " . $_SESSION['username'] . "!");
-            ?>
+        <div class="box">
+            <div class="formBox">
+                <form action="post_page.php" method="POST">
+                    <h1>Start Connecting...</h1>
+                    <?php
+                        print("Welcome, " . $_SESSION['username'] . "!");
+                    ?>
 
-            <p>Write something and post to start connecting with other IUP students!</p>
-            <hr>
-            <label for="post"> <strong>Write Here:</strong> </label> 
-            <br>
-            <input type="text" id="title" name="title" placeholder="Title" required>
-            <br>
+                    <p>Write something and post to start connecting with other IUP students!</p>
+                    <hr>
+                    <input type="text" id="title" name="title" placeholder="Title" required>
+                    <br>
 
-            <textarea id="post" name="content" rows="8" cols="50" placeholder="What do you want to say?" required></textarea>
-            <br>
+                    <textarea id="post" name="content" rows="8" cols="50" placeholder="What do you want to say?" required></textarea>
+                    <br>
 
-            <button type="submit">Submit post</button>
-            <hr>
+                    <button type="submit">Submit post</button>
+                    <hr>
 
-        </form>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
