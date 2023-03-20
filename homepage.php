@@ -33,8 +33,8 @@ if (!$conn) {
             <li><a href='new_post.php'> Post Thread</a></li>
             <li><a href='#'> Add Friends</a></li>
             <li><a href='#'> Messaging</a></li>
-            <li><a href='#'> About</a></li>
-            <li><a href='#'> Contact</a></li>
+            <li><a href='about.php'> About</a></li>
+            <li><a href='contact.html'> Contact</a></li>
         </ul>
         <form class = "search-form">
             <input type ="text" placeholder ="Explore Threads">
