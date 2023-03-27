@@ -14,11 +14,13 @@
                 <p> Connect with Indiana University of Pennsylvania</p>
             </div>
             <div class="formBox">
-                <form action="register.php" method="POST">
+                <form action="register.php" method="POST" enctype="multipart/form-data">
                     <input type="text" placeholder="IUP Email" name="email" required>
                     <input type="text" placeholder="Username" name="username" required>
                     <input type="password" placeholder="Password" name="password" required>
                     <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+                    <p>Select a profile picture:</p>
+                    <input type="file" name="profile_pic" accept="image/*">
                     <button type="submit">
                         Create Account
                     </button>

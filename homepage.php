@@ -89,7 +89,7 @@ if (!$conn) {
     </div> 
 
     <div class="maincontent">
-    <h2>Welcome, <?php echo $_SESSION['username'];?>!</h2>
+    <h2>Welcome, <?php echo "<a href='public_profile.php?username=" . $_SESSION['username'] . "'>" . $_SESSION['username'] . '</a>';?>!</h2>
     <hr>
     
     <?php

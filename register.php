@@ -16,6 +16,14 @@ $user_password = $_POST['password'];
 $confirm_password = $_POST['confirm_password'];
 $username = $_POST['username'];
 $email = $_POST['email'];
+if (isset($_FILES['profile_pic'])) {
+    $profile_pic = $_FILES['profile_pic']['tmp_name'];
+    $profile_pic = file_get_contents($profile_pic);
+    
+} else {
+    $profile_pic = file_get_contents("images/default-pfp.png");
+}
+$profile_pic = mysqli_real_escape_string($conn, $profile_pic);
 
 # Check if the passwords match, if not, alert then redirect to register.php
 if ($user_password != $confirm_password) {
@@ -41,8 +49,7 @@ if ($user_password != $confirm_password) {
                 header('Location: register.html?err=5');
             } else {
                 # if all checks pass, insert the user into the db. also pass a created_at timestamp
-                $query = "INSERT INTO users (username, password, email, created_at) VALUES ('$username', '$user_password', '$email', NOW())";
-                
+                $query = "INSERT INTO users (username, password, email, created_at, profile_pic) VALUES ('$username', '$user_password', '$email', NOW(), '$profile_pic')";
                 # print the reply from the db
                 if (mysqli_query($conn, $query)) {
                     echo "New record created successfully";
