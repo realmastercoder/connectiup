@@ -1,0 +1,49 @@
+
+h3 {
+    text-align: center;
+    background-color: #9e1c35;
+    color: white;
+}
+
+ol {
+    list-style-type: upper-roman;
+    font-size: 11pt;
+}
+
+.sidebar {
+    height: 100%; 
+    width: 240px; 
+    /*position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    float: right;
+    z-index: 1; /* Stay on top */
+    top: .05%; /* Stay at the top */
+    bottom: .05%;
+    right: 0;
+    background-color: #d8d8d3;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    /*overflow-y: scroll;*/
+    /*clear: right;*/
+    font-size: 11pt;
+    
+    
+}
+
+.maincontent {
+    margin-right: 160px;
+    padding: 0px 10px;
+   color:black;
+}
+
+a {
+    text-decoration: none;
+    color: #9e1c35;
+}
+
+a:hover {
+    color: #9e1c35;
+    font-size: 12pt;
+    font-weight: 600;
+}
