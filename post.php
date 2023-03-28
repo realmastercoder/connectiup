@@ -29,6 +29,9 @@ $title = $row['title'];
 $content = $row['content'];
 $created_at = $row['created_at'];
 $post_user_id = $row['user_id'];
+$post_pic = $row['post_image'];
+
+
 $sql = "SELECT * FROM users WHERE id = '$post_user_id'";
 $poster = mysqli_query($conn, $sql);
 $poster = mysqli_fetch_assoc($poster)['username'];
@@ -72,6 +75,11 @@ $poster = mysqli_fetch_assoc($poster)['username'];
       <?php echo $title; ?>
     </h1>
     <p>
+      <?php 
+      if ($post_pic != NULL) {
+        echo "<img style='width:200px' src='data:image/jpeg;base64," . base64_encode($post_pic) . "' style='width: 100%;'>";
+      }
+      ?>
       <?php echo $content; ?>
     </p>
     <hr>

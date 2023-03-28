@@ -43,7 +43,7 @@ if (!$conn) {
     </nav>
     <div class="box">
         <div class="formBox">
-            <form action="post_page.php" method="POST">
+            <form action="post_page.php" method="POST" enctype="multipart/form-data">
                 <h1>Start Connecting...</h1>
                 <?php
                 print("Welcome, " . $_SESSION['username'] . "!");
@@ -57,7 +57,8 @@ if (!$conn) {
                 <textarea id="post" name="content" rows="8" cols="50" placeholder="What do you want to say?"
                     required></textarea>
                 <br>
-
+                <p>Do you want to add an image to this post?</p>
+                <input type="file" name="post_pic" accept="image/*">
                 <button type="submit">Submit post</button>
                 <hr>
 
