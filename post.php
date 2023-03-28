@@ -46,6 +46,7 @@ $poster = mysqli_fetch_assoc($poster)['username'];
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/post_page.css">
+  <script src="scripts/image_change.js"></script>
 </head>
 
 <body>
@@ -71,23 +72,29 @@ $poster = mysqli_fetch_assoc($poster)['username'];
   </h2>
   <hr>
   <div class="post">
-    <h1>
+    <h1 style="padding-bottom: 10px">
       <?php echo $title; ?>
     </h1>
-    <p>
-      <?php 
+    <div style="display:flex">
+      <div>
+      <?php
       if ($post_pic != NULL) {
-        echo "<img style='width:200px' src='data:image/jpeg;base64," . base64_encode($post_pic) . "' style='width: 100%;'>";
+        echo "<img class=post_pic id=full src='data:image/jpeg;base64," . base64_encode($post_pic) . "' style='width: 100%;display:none;'>";
+        echo "<img class=post_pic id=scaled style='width:200px' src='data:image/jpeg;base64," . base64_encode($post_pic) . "' style='width: 100%;display:flex;align-items:left'>";
       }
       ?>
-      <?php echo $content; ?>
-    </p>
-    <hr>
-    <p>Posted by
-      <?php echo "<a href=public_profile.php?username=" . $poster . ">" . $poster . "</a>"; ?> on
-      <?php echo $created_at; ?>
-    </p>
-  </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;padding-left:15px;">
+        <?php echo $content; ?>
+      </div>
+      </p>
+      </div>
+      <hr>
+      <p>Posted by
+        <?php echo "<a href=public_profile.php?username=" . $poster . ">" . $poster . "</a>"; ?> on
+        <?php echo $created_at; ?>
+      </p>
+</div>
   <h2> Reply to this post <h2>
       <form action="reply.php" method="post">
         <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
