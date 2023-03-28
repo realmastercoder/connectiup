@@ -16,13 +16,17 @@ $user_password = $_POST['password'];
 $confirm_password = $_POST['confirm_password'];
 $username = $_POST['username'];
 $email = $_POST['email'];
-if (isset($_FILES['profile_pic'])) {
+// get the length of $_FILES['profile_pic'] in bytes
+$profile_pic_size = $_FILES['profile_pic']['size'];
+// if the file is less than 1B set a flag to true
+if ($profile_pic_size < 1) {
+    // load the default profile pic, then store in in $profile_pic
+    $profile_pic = file_get_contents('images/generic-pfp.png');
+} else {
     $profile_pic = $_FILES['profile_pic']['tmp_name'];
     $profile_pic = file_get_contents($profile_pic);
-    
-} else {
-    $profile_pic = file_get_contents("images/default-pfp.png");
 }
+
 $profile_pic = mysqli_real_escape_string($conn, $profile_pic);
 
 # Check if the passwords match, if not, alert then redirect to register.php
@@ -53,17 +57,13 @@ if ($user_password != $confirm_password) {
                 # print the reply from the db
                 if (mysqli_query($conn, $query)) {
                     echo "New record created successfully";
-                    header('Location: login.html?err=7');
+                    #header('Location: login.html?err=7');
                 } else {
                     #echo "Error: " . $query . "<br>" . mysqli_error($conn);
-                    header('Location: register.html?err=6');
+                    #header('Location: register.html?err=6');
                 }
             }
         }
     }
 }
-
-
-
-
 ?>

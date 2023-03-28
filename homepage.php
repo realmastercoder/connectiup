@@ -109,7 +109,7 @@ if (!$conn) {
                     print('<li class="row">');
                     print('<a href="post.php?post_id=' . $row["id"] . '">' . '<h4 class="title">' .  $title . '</h4></a>');
                     print('<div class="bottom"><p class="timestamp">' . $row["created_at"] . '</p>');
-                    print('<a href="#"><p class="author">' . $username . '</p></a></div></li>');
+                    print('<a href="public_profile.php?username=' . $username . '"><p class="author">' . $username . '</p></a></div></li>');
                     #print("created by: " . $username);
                     print("</div>");
                 }
