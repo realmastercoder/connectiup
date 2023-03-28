@@ -48,6 +48,7 @@ if (!$conn) {
             <h3>Rules for Posting</h3>
             <p>When writing posts and replies, users must keep in mind
                 the following rules&ast;:</p>
+            <br/>
             <ol>
                 <li>Users shall be respectful and courteous in their posts 
                     and replies to other users.</li><br/>
@@ -68,22 +69,24 @@ if (!$conn) {
                 <li>Users shall not engage in any illegal activity 
                     in their posts and replies. </li>    
             </ol>
-
+            <br/>
             <p>&ast;Refusal to comply with the rules listed above will result 
                 in consequences for the user. These consequences are outlined 
                 in ConnectIUP&apos;s Terms and Conditions that all users agree to in 
                 order to use ConnectIUP. To review our site&apos;s Terms and Conditions, 
-                click <a href="terms_cond.html">here</a>. 
+                click <a href="terms_cond.html"><span class=links>here</span></a>. 
             </p>
             <hr/>
             
             <h3>Helpful Links</h3>
             <ul>
+            <div class="links">
                 <li><a href="about.php">About ConnectIUP</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="terms_cond.html">Terms and Conditions</a></li>
-                <li><a href="#">FAQ</a></li> <!--FAQ page does not exist-->
-                <li><a href="#">Rules for Posting</a></li> <!--Post rules page does not exist-->
+                <li><a href="#">FAQ</a></li> <!--FAQ page does not exist currently-->
+                <li><a href="#">Rules for Posting</a></li> <!--Post rules page does not exist currently-->
+            </div>
             </ul>
             <hr/>
     </div> 
