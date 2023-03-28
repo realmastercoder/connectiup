@@ -28,6 +28,10 @@ if ($profile_pic_size < 1) {
 }
 
 $profile_pic = mysqli_real_escape_string($conn, $profile_pic);
+$user_password = mysqli_real_escape_string($conn, $user_password);
+$confirm_password = mysqli_real_escape_string($conn, $confirm_password);
+$username = mysqli_real_escape_string($conn, $username);
+$email = mysqli_real_escape_string($conn, $email);
 
 # Check if the passwords match, if not, alert then redirect to register.php
 if ($user_password != $confirm_password) {
