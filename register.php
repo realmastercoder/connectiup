@@ -57,10 +57,10 @@ if ($user_password != $confirm_password) {
                 # print the reply from the db
                 if (mysqli_query($conn, $query)) {
                     echo "New record created successfully";
-                    #header('Location: login.html?err=7');
+                    header('Location: login.html?err=7');
                 } else {
                     #echo "Error: " . $query . "<br>" . mysqli_error($conn);
-                    #header('Location: register.html?err=6');
+                    header('Location: register.html?err=6');
                 }
             }
         }

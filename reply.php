@@ -16,12 +16,14 @@ if (!$conn) {
 // find logged in user
 $user_id = $_SESSION['id'];
 $username = $_SESSION['username'];
+$content = $_POST['content'];
+$content = mysqli_real_escape_string($conn, $content);
 
 // find the post id from post request
 $post_id = $_POST['post_id'];
 
 // add an entry to the replies table
-$sql = "INSERT INTO replies (user_id, post_id, content, created_at) VALUES ('$user_id', '$post_id', '$_POST[content]', NOW())";
+$sql = "INSERT INTO replies (user_id, post_id, content, created_at) VALUES ('$user_id', '$post_id', '$content', NOW())";
 $result = mysqli_query($conn, $sql);
 
 // redirect to the post page

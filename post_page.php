@@ -23,6 +23,8 @@ $user_id = $_SESSION['id'];
 // get the title and content from the form
 $title = $_POST['title'];
 $content = $_POST['content'];
+// content might contain punctuation, so we need to escape it
+$content = mysqli_real_escape_string($conn, $content);
 
 $post_pic_size = $_FILES['post_pic']['size'];
 // if the file is less than 1B set a flag to true
