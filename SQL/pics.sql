@@ -1,0 +1,4 @@
+ALTER TABLE users
+ADD COLUMN profile_image LONGBLOB;
+ALTER TABLE posts
+ADD COLUMN post_image LONGBLOB;
