@@ -81,7 +81,8 @@ button {
     margin: 10px 60px;
     background-color: #d8d8d3;
     padding: 10px 15px;
-    width: 75%; 
+    width: 75%;
+    border-radius: 5px;
 }
 
 a {

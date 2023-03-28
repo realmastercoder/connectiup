@@ -29,7 +29,7 @@ $src = "data:image/png;base64," . $profile_pic;
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Profile Page for </title>
+        <title>Profile Page for <?php echo $username ?> </title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/pub_profile.css">
         <link rel="stylesheet" href="css/home.css">
