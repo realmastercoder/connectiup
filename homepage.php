@@ -81,11 +81,11 @@ if (!$conn) {
             <h3>Helpful Links</h3>
             <ul>
             <div class="links">
-                <li><a href="about.php">About ConnectIUP</a></li>
+                <li><a href="about.php">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="terms_cond.html">Terms and Conditions</a></li>
-                <li><a href="#">FAQ</a></li> <!--FAQ page does not exist currently-->
-                <li><a href="#">Rules for Posting</a></li> <!--Post rules page does not exist currently-->
+                <li><a href="faq.html">FAQ</a></li> 
+                <li><a href="post_rules.html">Rules for Posting</a></li>
             </div>
             </ul>
             <hr/>

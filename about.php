@@ -20,16 +20,34 @@ if (!$conn) {
     <title>About ConnectIUP</title>
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/post_page.css">
   </head>
 
   <body>
-    <h1>About ConnectIUP</h1> 
-    <br />
-    <center><img src="images/LogoConnectIUP.png" style="width: 500px;"></img></center>
-    <br />
+  <div id="banner">
+    <img src="images/LogoConnectIUP.png" style="width: 400px;">
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href='homepage.php'> Home</a></li>
+      <li><a href='new_post.php'> Post Thread</a></li>
+      <li><a href='#'> Add Friends</a></li>
+      <li><a href='#'> Messaging</a></li>
+      <li><a href='about.php'> About</a></li>
+      <li><a href='contact.html'> Contact</a></li>
+    </ul>
+    <form class="search-form">
+      <input type="text" placeholder="Explore Threads">
+      <button>Search</button>
+    </form>
+  </nav>
 
-    
-    <h2>What is ConnectIUP?</h2>
+    <h2>About ConnectIUP</h2> 
+    <!--<center><img src="images/LogoConnectIUP.png" style="width: 500px;"></img></center> -->
+
+    <div class="content">
+    <h3>What is ConnectIUP?</h3>
     <p>
       ConnectIUP is a social networking site specifically for IUP students! 
       Students can connect with one another and meet new people. 
@@ -40,7 +58,7 @@ if (!$conn) {
     <br />
 
 
-    <h2>Who can join?</h2>
+    <h3>Who can join?</h3>
     <p>
       All students of IUP can register an account with ConnectIUP
       and utilize its services. Click <a href="register.html">here</a> to 
@@ -48,7 +66,7 @@ if (!$conn) {
     </p>
     <br />
 
-    <h2>Why connect?</h2>
+    <h3>Why connect?</h3>
     <p>
       Getting involved enhances the college experience and ConnectIUP
       does exactly that for its users. Start enhancing your college experience
@@ -57,7 +75,7 @@ if (!$conn) {
     
     <br />
 
-    <h2>What can you do on ConnectIUP?</h2>
+    <h3>What can you do on ConnectIUP?</h3>
     <p>
       <ul>
         <li>Write and share posts</li>
@@ -67,7 +85,9 @@ if (!$conn) {
         <li>Personalize your ConnectIUP profile</li>
       </ul>
     </p>
-    <br />
+    </div>
+    
+  
 
   </body>
     
