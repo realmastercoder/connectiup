@@ -43,8 +43,7 @@ if (!$conn) {
     </form>
   </nav>
 
-    <h2>About ConnectIUP</h2> 
-    <!--<center><img src="images/LogoConnectIUP.png" style="width: 500px;"></img></center> -->
+    <h2>About ConnectIUP</h2>
 
     <div class="content">
     <h3>What is ConnectIUP?</h3>
@@ -61,8 +60,7 @@ if (!$conn) {
     <h3>Who can join?</h3>
     <p>
       All students of IUP can register an account with ConnectIUP
-      and utilize its services. Click <a href="register.html">here</a> to 
-      create your account now!
+      and utilize its services. 
     </p>
     <br />
 
