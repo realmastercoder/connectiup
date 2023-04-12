@@ -66,3 +66,18 @@ body {
 .formBox button:hover {
     background: #7b162a;
 }
+
+/* four checkboxes have the class check1 and their labels have the class label1
+    this is the css to properly align them */
+
+.check1 {
+    display: inline-block;
+    width: 25%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.label1 {
+    margin-left: -235px;
+}

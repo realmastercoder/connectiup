@@ -14,8 +14,8 @@ window.onload = () => {
         if (checkboxes[0].style.display == "none") {
         // loop through checkboxes
         for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].style.display = "block";
-            labels[i].style.display = "block";
+            checkboxes[i].style.display = "inline-block";
+            labels[i].style.display = "inline-block";
         }
         } else {
         // loop through checkboxes

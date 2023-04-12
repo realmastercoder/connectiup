@@ -63,22 +63,16 @@ if (!$conn) {
                 <!-- checkboxes to add tags to post -->
                 <div>
                     <p id='tags'>Add Tags:</p>
-                    <input type="checkbox" id="tag1" name="tag1" value="tag1">
-                    <label for="tag1">Tag 1</label><br>
-                    <input type="checkbox" id="tag2" name="tag2" value="tag2">
-                    <label for="tag2">Tag 2</label><br>
-                    <input type="checkbox" id="tag3" name="tag3" value="tag3">
-                    <label for="tag3">Tag 3</label><br>
-                    <input type="checkbox" id="tag4" name="tag4" value="tag4">
-                    <label for="tag4">Tag 4</label><br>
-                    <input type="checkbox" id="tag5" name="tag5" value="tag5">
-                    <label for="tag5">Tag 5</label><br>
-                    <input type="checkbox" id="tag6" name="tag6" value="tag6">
-                    <label for="tag6">Tag 6</label><br>
-                    <input type="checkbox" id="tag7" name="tag7" value="tag7">
-                    <label for="tag7">Tag 7</label><br>
-                    <input type="checkbox" id="tag8" name="tag8" value="tag8">
-                    <label for="tag8">Tag 8</label><br>
+                    <input class='check1' type="checkbox" name="AH" value="AH">
+                    <label class='label1' for="AH">Arts & Humanities</label><br>
+                    <input class='check1' type="checkbox" name="BUS" value="BUS">
+                    <label class='label1' for="BUS">Business</label><br>
+                    <input class='check1' type="checkbox" name="EC" value="EC">
+                    <label class='label1' for="EC">Education and Communications</label><br>
+                    <input class='check1' type="checkbox" name="HHS" value="HHS">
+                    <label class='label1' for="HHS">Health and Human Services</label><br>
+                    <input class='check1' type="checkbox" name="NSM" value="NSM">
+                    <label class='label1' for="NSM">Natural Sciences and Mathematics</label><br>
                 </div>
 
                 <button type="submit">Submit post</button>
