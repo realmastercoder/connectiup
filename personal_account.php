@@ -34,8 +34,8 @@ if (!$conn) {
             <li><a href='contact.html'> Contact</a></li>
         </ul>
         <form class = "search-form">
-            <input type ="text" placeholder ="Explore Threads">
-            <button>Search</button>
+            <input style="width:200px; margin-top:20px" type ="text" placeholder ="Explore Threads">
+            <button style="margin-left: 20px; margin-bottom: 20px ">Search</button>
         </form>
     </nav>
   <div class="container">
