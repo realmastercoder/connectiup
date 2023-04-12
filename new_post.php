@@ -63,15 +63,15 @@ if (!$conn) {
                 <!-- checkboxes to add tags to post -->
                 <div>
                     <p id='tags'>Add Tags:</p>
-                    <input class='check1' type="checkbox" name="AH" value="AH">
+                    <input class='check1' type="checkbox" name="tags[]" value="AH">
                     <label class='label1' for="AH">Arts & Humanities</label><br>
-                    <input class='check1' type="checkbox" name="BUS" value="BUS">
+                    <input class='check1' type="checkbox" name="tags[]" value="BUS">
                     <label class='label1' for="BUS">Business</label><br>
-                    <input class='check1' type="checkbox" name="EC" value="EC">
+                    <input class='check1' type="checkbox" name="tags[]" value="EC">
                     <label class='label1' for="EC">Education and Communications</label><br>
-                    <input class='check1' type="checkbox" name="HHS" value="HHS">
+                    <input class='check1' type="checkbox" name="tags[]" value="HHS">
                     <label class='label1' for="HHS">Health and Human Services</label><br>
-                    <input class='check1' type="checkbox" name="NSM" value="NSM">
+                    <input class='check1' type="checkbox" name="tags[]" value="NSM">
                     <label class='label1' for="NSM">Natural Sciences and Mathematics</label><br>
                 </div>
 

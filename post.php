@@ -47,6 +47,7 @@ $poster = mysqli_fetch_assoc($poster)['username'];
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/post_page.css">
   <script src="scripts/image_change.js"></script>
+  <script src="scripts/post.js"></script>
 </head>
 
 <body>
@@ -116,11 +117,23 @@ $poster = mysqli_fetch_assoc($poster)['username'];
           $sql = "SELECT * FROM users WHERE id = '$reply_user_id'";
           $reply_user = mysqli_query($conn, $sql);
           $reply_user = mysqli_fetch_assoc($reply_user)['username'];
+          $reply_id = $row['id'];
           print("<p>$reply_content</p>");
           print("<hr>");
-          print("<p>Posted by <a href=$reply_user>$reply_user</a> on $reply_created_at</p>");
+          print("<p>Posted by <a href=public_profile.php?username=$reply_user>$reply_user</a> on $reply_created_at</p>");
+          print("<input class='reply_reply' id='$reply_id' type='button' value='reply' data='$reply_content' author='$reply_user'>");
           print("</div>");
         }
+        
+        ?>
+    <!-- // add a reply form for replying to replies -->
+    <form class="reply" id="reply_form" action="reply.php" method="post" style="display:none">
+      <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">  
+      <textarea id='rrtext' rows="5" cols="100" name="content" ></textarea>
+      <input type="submit" value="Reply">
+    </form>
+
+        <?php
       }
       ?>
 </body>

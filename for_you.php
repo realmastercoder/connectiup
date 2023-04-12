@@ -93,29 +93,52 @@ if (!$conn) {
 
     <div class="maincontent">
     <h2>Welcome, <?php echo "<a href='public_profile.php?username=" . $_SESSION['username'] . "'>" . $_SESSION['username'] . '</a>';?>!</h2>
-    <a href=for_you.php>Switch to For You view</a>
+    <a href=homepage.php><strong>Switch to Home view</strong></a>
     <hr>
     
     <?php
             $sql = "SELECT * from posts ORDER BY id DESC";
             $result = mysqli_query($conn, $sql);
 
+            // get the tags associated with the logged in user
+            $user_sql = "SELECT * from users where username = '" . $_SESSION['username'] . "'";
+            $user_result = mysqli_query($conn, $user_sql);
+            $user_row = mysqli_fetch_assoc($user_result);
+            $ah = $user_row["AH"];
+            $bus = $user_row["BUS"];
+            $ec = $user_row["EC"];
+            $hhs = $user_row["HHS"];
+            $nsm = $user_row["NSM"];
+            $u_tag_array = array($ah, $bus, $ec, $hhs, $nsm);
+
             if (mysqli_num_rows($result) > 0) {
                 print('<ul class="no-bullets">');
                 while($row = mysqli_fetch_assoc($result)){
-                    print('<div class="post">');
-                    $title = $row["title"];
-                    $new_sql = "SELECT * from users where id = " . $row["user_id"];
-                    $new_result = mysqli_query($conn, $new_sql);
-                    $new_row = mysqli_fetch_assoc($new_result);
-                    $username = $new_row["username"];
-                    #print("title: " .'<a href="#">' . $row["title"] . '</a>' . "<br>");
-                    print('<li class="row">');
-                    print('<a href="post.php?post_id=' . $row["id"] . '">' . '<h4 class="title">' .  $title . '</h4></a>');
-                    print('<div class="bottom"><p class="timestamp">' . $row["created_at"] . '</p>');
-                    print('<a href="public_profile.php?username=' . $username . '"><p class="author">' . $username . '</p></a></div></li>');
-                    #print("created by: " . $username);
-                    print("</div>");
+                    // get the tags associated with the post
+                    $post_sql = "SELECT * from posts where id = " . $row["id"];
+                    $post_result = mysqli_query($conn, $post_sql);
+                    $post_row = mysqli_fetch_assoc($post_result);
+                    $post_ah = $post_row["AH"] == 1 and $ah == 1;
+                    $post_bus = $post_row["BUS"] == 1 and $bus == 1;
+                    $post_ec = $post_row["EC"] == 1 and $ec == 1;
+                    $post_hhs = $post_row["HHS"] == 1 and $hhs == 1;
+                    $post_nsm = $post_row["NSM"] == 1 and $nsm == 1;
+                    $p_tag_array = array($post_ah, $post_bus, $post_ec, $post_hhs, $post_nsm);
+                    if ( $post_ah or $post_bus or $post_ec or $post_hhs or $post_nsm ) {
+                        print('<div class="post">');
+                        $title = $row["title"];
+                        $new_sql = "SELECT * from users where id = " . $row["user_id"];
+                        $new_result = mysqli_query($conn, $new_sql);
+                        $new_row = mysqli_fetch_assoc($new_result);
+                        $username = $new_row["username"];
+                        #print("title: " .'<a href="#">' . $row["title"] . '</a>' . "<br>");
+                        print('<li class="row">');
+                        print('<a href="post.php?post_id=' . $row["id"] . '">' . '<h4 class="title">' .  $title . '</h4></a>');
+                        print('<div class="bottom"><p class="timestamp">' . $row["created_at"] . '</p>');
+                        print('<a href="public_profile.php?username=' . $username . '"><p class="author">' . $username . '</p></a></div></li>');
+                        #print("created by: " . $username);
+                        print("</div>");
+                    }
                 }
                 print('</ol>');
             }

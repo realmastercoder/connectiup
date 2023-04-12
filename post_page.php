@@ -13,6 +13,13 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+$ah = 0;
+$bus = 0;
+$ec = 0;
+$hhs = 0;
+$nsm = 0;
+$gen = 0;
+
 // insert a new post into the database
 // the structure of the post table is:
 // id, user_id, title, content, created_at
@@ -38,8 +45,33 @@ if ($post_pic_size < 1) {
     $post_pic = mysqli_real_escape_string($conn, $post_pic);
 }
 
+// get the tags from the tags array passed in post
+if (isset($_POST['tags'])) {
+  $tags = $_POST['tags'];
+  for ($i = 0; $i < count($tags); $i++) {
+    if ($tags[$i] == 'AH') {
+      $ah = 1;
+    }
+    if ($tags[$i] == 'BUS') {
+      $bus = 1;
+    }
+    if ($tags[$i] == 'EC') {
+      $ec = 1;
+    }
+    if ($tags[$i] == 'HHS') {
+      $hhs = 1;
+    }
+    if ($tags[$i] == 'NSM') {
+      $nsm = 1;
+    }
+  }
+} else {
+  $gen = 1;
+}
+
+
 // create the SQL query
-$sql = "INSERT INTO posts (user_id, title, content, created_at, post_image) VALUES ('$user_id', '$title', '$content', NOW(), '$post_pic')";
+$sql = "INSERT INTO posts (user_id, title, content, created_at, post_image, AH, BUS, EC, HHS, NSM, gen) VALUES ('$user_id', '$title', '$content', NOW(), '$post_pic', '$ah', '$bus', '$ec', '$hhs', '$nsm', '$gen')";
 $result = mysqli_query($conn, $sql);
 
 // print the result
