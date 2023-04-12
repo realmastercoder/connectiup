@@ -46,7 +46,6 @@ $poster = mysqli_fetch_assoc($poster)['username'];
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/post_page.css">
-  <script src="scripts/image_change.js"></script>
   <script src="scripts/post.js"></script>
 </head>
 
