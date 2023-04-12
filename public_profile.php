@@ -82,6 +82,12 @@ $src = "data:image/png;base64," . $profile_pic;
         <h3>Friends</h3>
         <h3>Groups</h3>
     </div>
+    <?php
+    // if the user logged in is the owner of the profile, show edit profile button
+    if ($_SESSION['username'] == $username) {
+        echo "<a href='personal_account.php'><h2>Edit Profile</h2></a>";
+    }
+    ?>
 
     </body>
 
