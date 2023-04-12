@@ -118,10 +118,19 @@ $poster = mysqli_fetch_assoc($poster)['username'];
           $reply_user = mysqli_query($conn, $sql);
           $reply_user = mysqli_fetch_assoc($reply_user)['username'];
           $reply_id = $row['id'];
-          print("<p>$reply_content</p>");
-          print("<hr>");
-          print("<p>Posted by <a href=public_profile.php?username=$reply_user>$reply_user</a> on $reply_created_at</p>");
-          print("<input class='reply_reply' id='$reply_id' type='button' value='reply' data='$reply_content' author='$reply_user'>");
+          print("<p class='left'>Posted by <a href=public_profile.php?username=$reply_user>$reply_user</a><br> at $reply_created_at");
+          // show the user's profile picture
+          $sql3 = "SELECT * FROM users WHERE username = '$reply_user'";
+          $result3 = mysqli_query($conn, $sql);
+          $row3 = mysqli_fetch_assoc($result3);
+          $profile_pic3 = $row3['profile_pic'];
+          if ($profile_pic3 != NULL) {
+            echo "<img class=profile_pic src='data:image/jpeg;base64," . base64_encode($profile_pic3) . "' style='width: 150px;'></p>";
+          }
+          print("<p class='right'>$reply_content</p>");
+          //print("<p style:'float:left>Posted by <a href=public_profile.php?username=$reply_user>$reply_user</a> on $reply_created_at</p>");
+          $reply_content = mysqli_real_escape_string($conn, $reply_content);
+          print("<br><br><input class='reply_reply' id='$reply_id' type='button' value='reply' data='$reply_content' author='$reply_user'>");
           print("</div>");
         }
         

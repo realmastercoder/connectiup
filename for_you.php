@@ -104,11 +104,11 @@ if (!$conn) {
             $user_sql = "SELECT * from users where username = '" . $_SESSION['username'] . "'";
             $user_result = mysqli_query($conn, $user_sql);
             $user_row = mysqli_fetch_assoc($user_result);
-            $ah = $user_row["AH"];
-            $bus = $user_row["BUS"];
-            $ec = $user_row["EC"];
-            $hhs = $user_row["HHS"];
-            $nsm = $user_row["NSM"];
+            $ah = $user_row["AH"] == 1;
+            $bus = $user_row["BUS"] == 1;
+            $ec = $user_row["EC"] == 1;
+            $hhs = $user_row["HHS"] == 1;
+            $nsm = $user_row["NSM"] == 1;
             $u_tag_array = array($ah, $bus, $ec, $hhs, $nsm);
 
             if (mysqli_num_rows($result) > 0) {
@@ -118,13 +118,12 @@ if (!$conn) {
                     $post_sql = "SELECT * from posts where id = " . $row["id"];
                     $post_result = mysqli_query($conn, $post_sql);
                     $post_row = mysqli_fetch_assoc($post_result);
-                    $post_ah = $post_row["AH"] == 1 and $ah == 1;
-                    $post_bus = $post_row["BUS"] == 1 and $bus == 1;
-                    $post_ec = $post_row["EC"] == 1 and $ec == 1;
-                    $post_hhs = $post_row["HHS"] == 1 and $hhs == 1;
-                    $post_nsm = $post_row["NSM"] == 1 and $nsm == 1;
-                    $p_tag_array = array($post_ah, $post_bus, $post_ec, $post_hhs, $post_nsm);
-                    if ( $post_ah or $post_bus or $post_ec or $post_hhs or $post_nsm ) {
+                    $post_ah = $post_row["AH"] == 1;
+                    $post_bus = $post_row["BUS"] == 1;
+                    $post_ec = $post_row["EC"] == 1;
+                    $post_hhs = $post_row["HHS"] == 1;
+                    $post_nsm = $post_row["NSM"] == 1;; 
+                    if ( $post_ah and $ah or $post_bus and $bus or $post_ec and $ec or $post_hhs and $hhs or $post_nsm and $nsm ) {
                         print('<div class="post">');
                         $title = $row["title"];
                         $new_sql = "SELECT * from users where id = " . $row["user_id"];

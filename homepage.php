@@ -93,6 +93,7 @@ if (!$conn) {
 
     <div class="maincontent">
     <h2>Welcome, <?php echo "<a href='public_profile.php?username=" . $_SESSION['username'] . "'>" . $_SESSION['username'] . '</a>';?>!</h2>
+    <input type=button class="logout" onclick="window.location.href='logout.php'" value="Logout"><br><br>
     <a href=for_you.php>Switch to For You view</a>
     <hr>
     
