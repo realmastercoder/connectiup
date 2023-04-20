@@ -22,6 +22,7 @@ if (!$conn) {
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
@@ -36,6 +37,7 @@ if (!$conn) {
             <li><a href='#'> Messaging</a></li>
             <li><a href='about.php'> About</a></li>
             <li><a href='contact.html'> Contact</a></li>
+            <li><input type=button class="logout" onclick="window.location.href='logout.php'" value="Logout"></li>
         </ul>
         <form class = "search-form">
             <input type ="text" placeholder ="Explore Threads">
@@ -93,8 +95,11 @@ if (!$conn) {
 
     <div class="maincontent">
     <h2>Welcome, <?php echo "<a href='public_profile.php?username=" . $_SESSION['username'] . "'>" . $_SESSION['username'] . '</a>';?>!</h2>
-    <input type=button class="logout" onclick="window.location.href='logout.php'" value="Logout"><br><br>
-    <a href=for_you.php>Switch to For You view</a>
+
+    <div class= "view">
+    <a href=for_you.php>Switch to For You View</a>
+    </div>
+    <br>
     <hr>
     
     <?php

@@ -1,5 +1,6 @@
 body {
-    background: #9e1c35;;
+    background: #9e1c35;
+    ;
     margin: 0;
 }
 
@@ -90,7 +91,9 @@ a {
     color: black;
 }
 
-h1, h4, ol {
+h1,
+h4,
+ol {
     margin: 0;
     font-size: 22pt;
 }
@@ -99,7 +102,7 @@ ul.no-bullets {
     list-style-type: none;
 }
 
-p { 
+p {
     margin: 5px 0;
 }
 
@@ -126,4 +129,3 @@ p {
 .timestamp {
     padding-right: 10px;
 }
-
