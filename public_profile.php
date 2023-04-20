@@ -33,6 +33,7 @@ $src = "data:image/png;base64," . $profile_pic;
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/pub_profile.css">
         <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/button.css">
     </head>
 
     <body>
@@ -47,6 +48,7 @@ $src = "data:image/png;base64," . $profile_pic;
         <li><a href='#'> Messaging</a></li>
         <li><a href='about.php'> About</a></li>
         <li><a href='contact.html'> Contact</a></li>
+        <li><input type=button class="logout" onclick="window.location.href='logout.php'" value="Logout"></li>
       </ul>
       <form class = "search-form">
         <input type ="text" placeholder ="Explore Threads">

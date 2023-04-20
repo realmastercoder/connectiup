@@ -37,7 +37,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+
+li a:hover {
     font-size: larger;
     font-weight: 600;
 }
