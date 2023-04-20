@@ -47,6 +47,7 @@ $poster = mysqli_fetch_assoc($poster)['username'];
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/post_page.css">
   <script src="scripts/post.js"></script>
+  <link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
@@ -61,6 +62,7 @@ $poster = mysqli_fetch_assoc($poster)['username'];
       <li><a href='#'> Messaging</a></li>
       <li><a href='about.php'> About</a></li>
       <li><a href='contact.html'> Contact</a></li>
+      <li><input type=button class="logout" onclick="window.location.href='logout.php'" value="Logout"></li>
     </ul>
     <form class="search-form">
       <input type="text" placeholder="Explore Threads">

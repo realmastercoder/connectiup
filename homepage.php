@@ -100,6 +100,7 @@ if (!$conn) {
     <a href=for_you.php>Switch to For You View</a>
     </div>
     <br>
+    <br>
     <hr>
     
     <?php

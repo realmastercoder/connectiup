@@ -22,6 +22,7 @@ if (!$conn) {
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/poststyle.css">
     <script src="scripts/collapse.js"></script>
+    <link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
@@ -36,6 +37,7 @@ if (!$conn) {
             <li><a href='#'> Messaging</a></li>
             <li><a href='about.php'> About</a></li>
             <li><a href='contact.html'> Contact</a></li>
+            <li><input type=button class="logout" onclick="window.location.href='logout.php'" value="Logout"></li>
         </ul>
         <form class="search-form">
             <input type="text" placeholder="Explore Threads">
