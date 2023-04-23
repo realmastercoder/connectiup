@@ -97,7 +97,7 @@ if (!$conn) {
     <h2>Welcome, <?php echo "<a href='public_profile.php?username=" . $_SESSION['username'] . "'>" . $_SESSION['username'] . '</a>';?>!</h2>
 
     <div class= "view">
-    <a href=for_you.php>Switch to For You View</a>
+    <a href=for_you.php>Switch to For You View </a>
     </div>
     <br>
     <br>

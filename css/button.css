@@ -36,10 +36,11 @@
     height: 30px;
 
     padding-top: 5px;
+    margin-left: 100px;
 }
+
 
 .view:hover {
     box-shadow: 0px 5px 15px 0px  black;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
