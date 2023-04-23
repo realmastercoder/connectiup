@@ -31,7 +31,7 @@ if (!$conn) {
     </div>
     <nav class ="menu">
         <ul>
-            <li><a href='#'> Home</a></li>
+            <li><a href='homepage.php'> Home</a></li>
             <li><a href='new_post.php'> Post Thread</a></li>
             <li><a href='addfriends.php'> Add Friends</a></li>
             <li><a href='#'> Messaging</a></li>
