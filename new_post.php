@@ -21,7 +21,7 @@ if (!$conn) {
     <title>ConnectIUP - Post Feature</title>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/poststyle.css">
-    <script src="scripts/collapse.js"></script>
+    <!--<script src="scripts/collapse.js"></script> This was causing display issues-->
     <link rel="stylesheet" href="css/button.css">
 </head>
 
